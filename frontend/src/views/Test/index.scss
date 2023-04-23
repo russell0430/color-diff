@@ -1,0 +1,12 @@
+.test{
+    display:flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:50px;
+    .intro{
+        text-align: center;
+        margin:30px;
+    }
+}

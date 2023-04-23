@@ -1,0 +1,24 @@
+.experiment {
+  .hint {
+    margin: 20px auto;
+  }
+
+  .chart {
+  }
+  .submit-btn {
+    margin: 30px auto;
+    background-color: bisque;
+    opacity: 0.6;
+    border-radius: 6px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    width: 100px;
+    cursor:pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+}

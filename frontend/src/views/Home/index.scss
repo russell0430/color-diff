@@ -1,0 +1,49 @@
+.home {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  .intro {
+    font-size: 30px;
+  }
+  .list {
+    border-radius: 20px;
+    background: white;
+    .list-item {
+      margin: 20px 100px;
+    }
+  }
+  .example {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .images {
+      display: flex;
+
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 40px;
+      img {
+        width: 30%;
+      }
+    }
+  }
+
+  .confirm {
+    width: 80px;
+    height: 40px;
+    margin: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 40px;
+    background-color: antiquewhite;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: darkgrey;
+      color: black;
+      transform: scale(1.3);
+    }
+  }
+}

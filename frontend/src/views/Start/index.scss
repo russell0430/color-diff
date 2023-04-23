@@ -1,0 +1,28 @@
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  .intro {
+    margin: 20px;
+  }
+  .list {
+    .list-item {
+      margin: 10px;
+    }
+  }
+  .confirm {
+    background-color: antiquewhite;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      background: rgb(216, 181, 134);
+    }
+  }
+}
