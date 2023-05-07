@@ -59,7 +59,6 @@ function Experiment() {
     }
   }
 
-  console.log(currentImgUrl)
   return (
     <div
       className="experiment"
@@ -70,7 +69,7 @@ function Experiment() {
         {imgList.length - currentIndex}
         {currentImgUrl}
       </div>
-      {!!currentImgUrl ? (
+      {currentImgUrl ? (
         <div className="chart">
           <img src={currentImgUrl} alt="" />
         </div>

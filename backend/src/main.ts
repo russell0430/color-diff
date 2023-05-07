@@ -23,13 +23,12 @@ if (Number(process.env.BACKEND_PORT)) {
 }
 
 // usage of concating public url
-let domain = "http://localhost"
-if (process.env.BACKEND_DOMAIN) {
-  domain = process.env.BACKEND_DOMAIN
-} else {
-  console.warn(`no specific domain founding, using ${domain}`)
-}
-
+// let domain = "/"
+// if (process.env.BACKEND_DOMAIN) {
+//   domain = process.env.BACKEND_DOMAIN
+// } else {
+//   console.warn(`no specific domain founding, using ${domain}`)
+// }
 
 app.use(imgPrefix, express.static(imgUrlPrefix))
 app.use(cors())
@@ -38,5 +37,5 @@ app.get("/", (req, res) => {
   res.send("hello")
 })
 app.listen(port, () => {
-  console.log("on")
+  console.log(`server is running on port ${port}`)
 })

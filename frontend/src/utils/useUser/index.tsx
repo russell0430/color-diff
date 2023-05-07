@@ -18,8 +18,8 @@ const Context = createContext({} as ContextType)
 export const UserProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
-  const [name, setName] = useState<NameType>("!!")
-  const [experiment, setExperiment] = useState<ExperimentType>(1)
+  const [name, setName] = useState<NameType>(null)
+  const [experiment, setExperiment] = useState<ExperimentType>(null)
   const contextValue = useMemo(
     () => ({ name, setName, experiment, setExperiment }),
     [name, setName, experiment, setExperiment]

@@ -66,16 +66,16 @@ function shuffle<T>(array: T[]): T[] {
 }
 
 let port = 5174
-if (Number(process.env.PORT)) {
-  port = Number(process.env.PORT)
+if (Number(process.env.BACKEND_PORT)) {
+  port = Number(process.env.BACKEND_PORT)
 } else {
   console.warn(`no specific port found, using ${port}`)
 }
 
 // usage of concating public url
 let domain = "http://localhost"
-if (process.env.DOMAIN) {
-  domain = process.env.DOMAIN
+if (process.env.BACKEND_DOMAIN) {
+  domain = process.env.BACKEND_DOMAIN
 } else {
   console.warn(`no specific domain founding, using ${domain}`)
 }

@@ -31,9 +31,9 @@ function Home() {
       <div className="example">
         <div>以下就是示例图</div>
         <div className="images">
-          <img src="../../../public/1.png" alt=""></img>
-          <img src="../../../public/2.png" alt=""></img>
-          <img src="../../../public/3.png" alt=""></img>
+          <img src="/1.png" alt=""></img>
+          <img src="/2.png" alt=""></img>
+          <img src="/3.png" alt=""></img>
         </div>
       </div>
       <ul className="list">
@@ -44,10 +44,10 @@ function Home() {
           使用<b>{"<b>加粗文字</b>"}</b>
         </li>
       </ul>
-      <div style={{margin:"10px"}}>请输入您的姓名</div>
+      <div style={{ margin: "10px" }}>请输入您的姓名</div>
       <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
       <div className="confirm" onClick={start}>
-        confirm
+        确认
       </div>
     </div>
   )
