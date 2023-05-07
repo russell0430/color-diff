@@ -29,7 +29,6 @@ const useConfigs = () => {
 
   const next = useCallback(
     (res: boolean): boolean => {
-      console.log(currentIndex)
       filledArrayRef.current[currentIndex] = res
       if (currentIndex + 1 >= imgList.length) {
         console.log("finished")

@@ -59,7 +59,6 @@ function Experiment() {
     }
   }
 
-  console.log(currentImgUrl)
   return (
     <div
       className="experiment"

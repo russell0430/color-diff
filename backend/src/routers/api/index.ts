@@ -13,7 +13,7 @@ imgListRouter.get("/:group", (req, res, next) => {
     return
   }
   let imgList
-  if (process.env.MODE === "production")
+  if (process.env.MODE !== "production")
     imgList = mockGetImgList(Number(req.params.group) as 1 | 2 | 3)
   else {
     imgList = getImgList(Number(req.params.group) as 1 | 2 | 3)
