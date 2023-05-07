@@ -26,5 +26,4 @@ dist-ssr
 *.sw?
 
 # Resource
-public
-result
+result/*/*.csv

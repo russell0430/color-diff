@@ -36,6 +36,10 @@ app.use("/api", apiRouter)
 app.get("/", (req, res) => {
   res.send("hello")
 })
-app.listen(port, () => {
-  console.log(`server is running on port ${port}`)
-})
+try {
+  app.listen(port, () => {
+    console.log(`server is running on port ${port}`)
+  })
+} catch (err) {
+  console.log(err)
+}

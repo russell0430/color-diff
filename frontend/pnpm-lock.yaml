@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/node': ^20.1.0
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
   '@types/react-router-dom': ^5.3.3
   '@typescript-eslint/eslint-plugin': ^5.57.1
   '@typescript-eslint/parser': ^5.57.1
   '@vitejs/plugin-react': ^4.0.0-beta.0
+  dotenv: ^16.0.3
   eslint: ^8.38.0
   eslint-plugin-react-hooks: ^4.6.0
   eslint-plugin-react-refresh: ^0.3.4
@@ -23,18 +25,20 @@ dependencies:
   react-router-dom: registry.npmmirror.com/react-router-dom/6.10.0_biqbaboplfbrettd7655fr4n2y
 
 devDependencies:
+  '@types/node': registry.npmmirror.com/@types/node/20.1.0
   '@types/react': registry.npmmirror.com/@types/react/18.0.37
   '@types/react-dom': registry.npmmirror.com/@types/react-dom/18.0.11
   '@types/react-router-dom': registry.npmmirror.com/@types/react-router-dom/5.3.3
   '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.59.0_wsbkzerfphvgr4lle7vmeh64yi
   '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.59.0_voubu7prgxjfsfbgx5d4sqnwiy
   '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/4.0.0-beta.1_vite@4.3.0
+  dotenv: registry.npmmirror.com/dotenv/16.0.3
   eslint: registry.npmmirror.com/eslint/8.38.0
   eslint-plugin-react-hooks: registry.npmmirror.com/eslint-plugin-react-hooks/4.6.0_eslint@8.38.0
   eslint-plugin-react-refresh: registry.npmmirror.com/eslint-plugin-react-refresh/0.3.4_eslint@8.38.0
   sass: registry.npmmirror.com/sass/1.62.0
   typescript: registry.npmmirror.com/typescript/5.0.4
-  vite: registry.npmmirror.com/vite/4.3.0_sass@1.62.0
+  vite: registry.npmmirror.com/vite/4.3.0_zkeme7db76kuirnzuwgmmznmcq
 
 packages:
 
@@ -725,6 +729,12 @@ packages:
     version: 7.0.11
     dev: true
 
+  registry.npmmirror.com/@types/node/20.1.0:
+    resolution: {integrity: sha512-O+z53uwx64xY7D6roOi4+jApDGFg0qn6WHcxe5QeqjMaTezBO/mxdfFXIVAVVyNWKx84OmPB3L8kbVYOTeN34A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-20.1.0.tgz}
+    name: '@types/node'
+    version: 20.1.0
+    dev: true
+
   registry.npmmirror.com/@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.5.tgz}
     name: '@types/prop-types'
@@ -945,7 +955,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': registry.npmmirror.com/@babel/plugin-transform-react-jsx-source/7.19.6_@babel+core@7.21.4
       magic-string: registry.npmmirror.com/magic-string/0.30.0
       react-refresh: registry.npmmirror.com/react-refresh/0.14.0
-      vite: registry.npmmirror.com/vite/4.3.0_sass@1.62.0
+      vite: registry.npmmirror.com/vite/4.3.0_zkeme7db76kuirnzuwgmmznmcq
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1217,6 +1227,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: registry.npmmirror.com/esutils/2.0.3
+    dev: true
+
+  registry.npmmirror.com/dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/dotenv/-/dotenv-16.0.3.tgz}
+    name: dotenv
+    version: 16.0.3
+    engines: {node: '>=12'}
     dev: true
 
   registry.npmmirror.com/electron-to-chromium/1.4.368:
@@ -2295,7 +2312,7 @@ packages:
       punycode: registry.npmmirror.com/punycode/2.3.0
     dev: true
 
-  registry.npmmirror.com/vite/4.3.0_sass@1.62.0:
+  registry.npmmirror.com/vite/4.3.0_zkeme7db76kuirnzuwgmmznmcq:
     resolution: {integrity: sha512-JTGFgDh3dVxeGBpuQX04Up+JZmuG6wu9414Ei36vQzaEruY/M4K0AgwtuB2b4HaBgB7R8l+LHxjB0jcgz4d2qQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite/-/vite-4.3.0.tgz}
     id: registry.npmmirror.com/vite/4.3.0
     name: vite
@@ -2323,6 +2340,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': registry.npmmirror.com/@types/node/20.1.0
       esbuild: registry.npmmirror.com/esbuild/0.17.17
       postcss: registry.npmmirror.com/postcss/8.4.23
       rollup: registry.npmmirror.com/rollup/3.20.6

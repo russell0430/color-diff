@@ -59,24 +59,25 @@ function Experiment() {
     }
   }
 
+  console.log(currentImgUrl)
   return (
     <div
       className="experiment"
       style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
       <div className="hint">
-        当前已填{currentIndex},当前类型剩余{getTypeRemaining()},总共剩余
+        当前已选{currentIndex},当前标记类型剩余{getTypeRemaining()},实验总共剩余
         {imgList.length - currentIndex}
-        {currentImgUrl}
       </div>
-      {currentImgUrl ? (
+      {!!currentImgUrl ? (
         <div className="chart">
           <img src={currentImgUrl} alt="" />
         </div>
       ) : null}
+      <div>您是否认为图中标记的两种颜色完全相同？</div>
       {isFinished ? (
         <div className="submit-btn" onClick={submitData}>
-          submit
+          我已完成实验，确认提交。
         </div>
       ) : (
         <Selector onSelect={onSelect}></Selector>

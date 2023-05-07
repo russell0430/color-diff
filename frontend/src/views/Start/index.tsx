@@ -1,19 +1,18 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./index.scss"
 function Start() {
+  const navigate = useNavigate()
   return (
-    <div className="start">
-      你被强化了,快去送
-      <div className="intro">这个在 src/views/Start/index.tsx里</div>
+    <div className="guide">
+      <div className="title">实验指南</div>
       <ul className="list">
-        <li className="list-item">注意不要A</li>
-        <li className="list-item">注意不要b</li>
-        <li className="list-item">注意c</li>
-      </ul>
-      <div className="confirm">
-        <Link to="/group">确定</Link>
-      </div>
+        <li className="list-item">恭喜您已经完成训练任务！</li>
+        <li className="list-item"><b>{"为保证实验数据的准确性，在实验过程中切勿缩放界面！"}</b></li>
+        <li className="list-item"><b>{"为保证实验数据的完整性，在实验过程中切勿刷新界面和回退界面！"}</b></li>
+        <li className="list-item">如果您准备好了，可以点击下面的“开始实验”正式进入实验</li>
+      </ul> 
+      <div className="start"><Link to="/group">开始实验</Link></div>
     </div>
   )
 }

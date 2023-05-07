@@ -1,4 +1,4 @@
-const URL = "http://localhost:5174"
+const URL = process.env.BACKEND_URL || "http://localhost:5174"
 
 export async function getImgList({
   test = false,

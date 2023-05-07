@@ -11,7 +11,7 @@ function Group() {
   }
   return (
     <div className="group">
-      <div className="group-hint">please choose a set of experiment</div>
+      <div className="group-hint">请选择您被告知需要去做的实验，选择一个即可</div>
       <div className="group-list">
         {Array(3)
           .fill(0)

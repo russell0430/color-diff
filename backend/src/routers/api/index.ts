@@ -12,15 +12,14 @@ imgListRouter.get("/:group", (req, res, next) => {
     res.status(200).json({ status: 200, data: getTestImgList() }).end()
     return
   }
-  const imgList = mockGetImgList(Number(req.params.group) as 1 | 2 | 3)
+  let imgList
+  if (process.env.MODE === "production")
+    imgList = mockGetImgList(Number(req.params.group) as 1 | 2 | 3)
+  else {
+    imgList = getImgList(Number(req.params.group) as 1 | 2 | 3)
+  }
   res.status(200).json({ status: 200, data: imgList }).end()
 })
-// imgListRouter.get("/test", (req, res) => {
-//   res
-//     .status(200)
-//     .json({ status: 200, data: ["test1", "test2"] })
-//     .end()
-// })
 
 const router = Router()
 router.use(express.json())
@@ -29,14 +28,18 @@ router.use("/imglist", imgListRouter)
 
 router.post("/submit", (req, response) => {
   console.log(req.body)
-  writeCsv(req.body).then((res) => {
-    if (res) {
-      response.status(200).json({ data: { success: true } })
-    } else {
-      response.status(400).json({ data: { success: false } })
-    }
-    response.end()
-  })
+  try {
+    writeCsv(req.body).then((res) => {
+      if (res) {
+        response.status(200).json({ data: { success: true } })
+      } else {
+        response.status(400).json({ data: { success: false } })
+      }
+      response.end()
+    })
+  } catch (err) {
+    console.log(err)
+  }
 })
 
 export default router

@@ -28,8 +28,7 @@ function Test() {
   console.log(currentIndex)
   return (
     <div className="test">
-      <div className="intro">这个在 src/views/Test/index.tsx里</div>
-      <div className="intro">你能够区分下列的线条嘛</div>
+      <div className="intro">您是否认为图中标记的两种颜色完全相同？</div>
       <div>
         <img src={imgList.current[currentIndex] || ""} alt="" />
       </div>
