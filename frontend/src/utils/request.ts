@@ -1,4 +1,4 @@
-const URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5174"
+const URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080"
 export async function getImgList({
   test = false,
   exp = 1,
